@@ -44,7 +44,7 @@ module ElasticTranscoder
         Outputs: outputs.map {|output|
           {
             Key: output['key'],
-            ThumbnailPattern: '',
+            ThumbnailPattern: output['thumbnail_pattern'] || '',
             Rotate: 'auto',
             PresetId: output['preset_id']
           }
